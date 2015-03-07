@@ -1,5 +1,18 @@
-<div id='container'>
-<!-- Your code here -->
+<div id='container' ng-controller="ShortenController">
+    <h3>Add a link</h3>
+    <form name="addLinkForm" ng-submit='addLink(newLink)' novalidate>
+        <input type='text' ng-model='newLink' placeholder="http://...">
+        <div>
+        {{message}}
+        </div>
+        <button ng-disabled="addLinkForm.$invalid">Add</button>
+        <button><a href="#/links">Go back to links</a></button>
+    </form>
+
+    <div>
+    {{newLink}}
+    </div>
+
 
 </div>
 

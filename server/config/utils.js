@@ -5,6 +5,7 @@ var request = require('request'),
 
 module.exports = {
   getUrlTitle: function(url) {
+    console.log("!!!!!!!!!!!!!!!!!!util.js!!!!!!!!!!!!!");
     var defer = Q.defer();
     request(url, function(err, res, html) {
       if (err) {
@@ -20,6 +21,7 @@ module.exports = {
   },
 
   isValidUrl: function(url) {
+    console.log('Url being passed in is: ', url);
     return url.match(rValidUrl);
   }
 };

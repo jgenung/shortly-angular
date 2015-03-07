@@ -1,3 +1,9 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller="LinksController">
+    <div class="link" ng-repeat="link in data">
+        <div class="title">{{ link.title }}</div>
+        <div class="original">{{ link.url }}</div>
+        <div class="visits">{{ link.visits }}</div>
+    </div>
+
+    <button><a href="#/shorten">Add a link</a></button>
 </div>
